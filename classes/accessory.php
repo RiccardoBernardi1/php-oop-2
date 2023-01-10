@@ -15,9 +15,9 @@ class Accessory extends Product{
     public function getDimensions(){
         return $this->dimensions;
     }
-    public function __construct(string $_name,float $_price,array $_category,array $_materials,string $_dimensions)
+    public function __construct(string $_image,string $_name,float $_price,array $_category,array $_materials,string $_dimensions)
     {
-        parent::__construct($_name,$_price,$_category);
+        parent::__construct($_image,$_name,$_price,$_category);
         $this->setMaterials($_materials);
         $this->setDimensions($_dimensions);
     }

@@ -8,9 +8,9 @@ class Toy extends Product{
     public function getMaterials(){
         return $this->materials;
     }
-    public function __construct(string $_name,float $_price,array $_category,array $_materials)
+    public function __construct(string $_image,string $_name,float $_price,array $_category,array $_materials)
     {
-        parent::__construct($_name,$_price,$_category);
+        parent::__construct($_image,$_name,$_price,$_category);
         $this->setMaterials($_materials);
     }
 }

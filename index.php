@@ -5,8 +5,6 @@ require_once __DIR__."/classes/food.php";
 require_once __DIR__."/classes/toy.php";
 require_once __DIR__."/classes/accessory.php";
 require_once __DIR__."/db.php";
-
-var_dump($products);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +19,22 @@ var_dump($products);
 </head>
 <body>
     <main>
-        <div class="card"></div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+</div>
     </main>    
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
