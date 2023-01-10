@@ -4,5 +4,5 @@ $categories=[
     $cat=new Category("Cat","<i class=\"fa-solid fa-cat\"></i>"),
 ];
 $products=[
-    new Product("Ciotola",12.33, $categories[0])
+    new Product("Ciotola",12.33, $dog)
 ];
