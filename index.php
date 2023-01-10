@@ -23,16 +23,19 @@ require_once __DIR__."/db.php";
     </header>
     <main class="my-5 py-5">
         <div class="container d-flex flex-wrap justify-content-around">
-            <?php foreach($products as $product){ ?>
+            <?php foreach($products as $product){ 
+                    if(get_class($product) == "Accessory"){
+            ?>
                 <div class="card my-4" style="width: 18rem;">
                     <img src=<?php echo $product->getImage() ?> class="card-img-top" alt=<?php echo $product->getName() ?>>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $product->getName() ?></h5>
+                        <h4 class="card-title"><?php echo $product->getName() ?></h4>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">
+                            <h5>Materials:</h5>
+                            <?php echo $product->getMaterials() ?>
+                        </li>
                     </ul>
                     <div class="card-body">
                         <button href="#" class="btn btn-primary me-3">Buy</button>
@@ -40,7 +43,55 @@ require_once __DIR__."/db.php";
                         <span class="text-end"><?php echo $product->getPrice() ?>$</span>
                     </div>
                 </div>
-            <?php } ?>
+            <?php 
+                    }elseif(get_class($product) == "Toy"){                  
+            ?>
+                <div class="card my-4" style="width: 18rem;">
+                    <img src=<?php echo $product->getImage() ?> class="card-img-top" alt=<?php echo $product->getName() ?>>
+                    <div class="card-body">
+                        <h4 class="card-title"><?php echo $product->getName() ?></h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5>Materials:</h5>
+                            <?php echo $product->getMaterials() ?>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <button href="#" class="btn btn-primary me-3">Buy</button>
+                        <a href="#" class="card-link me-4">More info</a>
+                        <span class="text-end"><?php echo $product->getPrice() ?>$</span>
+                    </div>
+                </div>
+            <?php 
+                    }elseif(get_class($product) == "Food"){                  
+            ?>
+                <div class="card my-4" style="width: 18rem;">
+                    <img src=<?php echo $product->getImage() ?> class="card-img-top" alt=<?php echo $product->getName() ?>>
+                    <div class="card-body">
+                        <h4 class="card-title"><?php echo $product->getName() ?></h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5>Ingredients:</h5>
+                            <ul>
+                                <?php foreach($product->getIngredients() as $ingredient){ ?>
+                                    <li><?php echo $ingredient ?></li>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><?php echo $product->getExpirationDate() ?></li>
+                    </ul>
+                    <div class="card-body">
+                        <button href="#" class="btn btn-primary me-3">Buy</button>
+                        <a href="#" class="card-link me-4">More info</a>
+                        <span class="text-end"><?php echo $product->getPrice() ?>$</span>
+                    </div>
+                </div>
+            <?php
+                    }
+                } 
+            ?>
         </div>
     </main>    
 
