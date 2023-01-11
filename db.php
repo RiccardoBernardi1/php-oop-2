@@ -14,7 +14,7 @@ $products=[
     new Food("img/1.webp","Kibble for Cats",5.99,$cat,"02/12/23")
 ];
 try{
-    $products[5]->setIngredients(["Salmon","a"]);
+    $products[5]->setIngredients(["Salmon"]);
 }catch(Exception $e){
     echo "Error:".$e->getMessage(); die;
 }
