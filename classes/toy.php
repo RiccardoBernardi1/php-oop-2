@@ -1,13 +1,8 @@
 <?php
+require_once __DIR__."/product.php";
+require_once __DIR__."/../Traits/Material.php";
 class Toy extends Product{
-    private $materials;
-
-    public function setMaterials($_materials){
-        $this->materials=$_materials;
-    }
-    public function getMaterials(){
-        return $this->materials;
-    }
+    use Material;
     public function __construct(string $_image,string $_name,float $_price,Category $_category,string $_materials)
     {
         parent::__construct($_image,$_name,$_price,$_category);

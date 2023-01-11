@@ -1,7 +1,8 @@
 <?php 
+require_once __DIR__."/../Traits/NameItem.php";
 class Product{
+    use NameItem;
     private $image;
-    private $name;
     private $price;
     private $category;
 
@@ -11,17 +12,11 @@ class Product{
     public function getImage(){
         return $this->image;
     }
-    public function setName($_name){
-        $this->name=$_name;
-    }
     public function setPrice($_price){
         $this->price=$_price;
     }
     public function setCategory($_category){
         $this->category=$_category;
-    }
-    public function getName(){
-        return $this->name;
     }
     public function getPrice(){
         return $this->price;

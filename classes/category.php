@@ -1,23 +1,18 @@
 <?php
+require_once __DIR__."/../Traits/NameItem.php";
 class Category{
-    private $category;
+    use NameItem;
     private $icon;
 
-    public function setCategory($_category){
-        $this->category=$_category;
-    }
     public function setIcon($_icon){
         $this->icon=$_icon;
-    }
-    public function getCategory(){
-        return $this->category;
     }
     public function getIcon(){
         return $this->icon;
     }
-    public function __construct(string $_category,string $_icon)
+    public function __construct(string $_name,string $_icon)
     {
-        $this->setCategory($_category);
+        $this->setName($_name);
         $this->setIcon($_icon);
     }
 }

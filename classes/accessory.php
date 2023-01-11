@@ -1,16 +1,11 @@
 <?php
+require_once __DIR__."/product.php";
+require_once __DIR__."/../Traits/Material.php";
 class Accessory extends Product{
-    private $materials;
+    use Material;
     private $dimensions;
-
-    public function setMaterials($_materials){
-        $this->materials=$_materials;
-    }
     public function setDimensions($_dimensions){
         $this->dimensions=$_dimensions;
-    }
-    public function getMaterials(){
-        return $this->materials;
     }
     public function getDimensions(){
         return $this->dimensions;

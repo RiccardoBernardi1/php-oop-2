@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__."/classes/product.php";
+require_once __DIR__."/classes/category.php";
 $categories=[
     $dog=new Category("Dog","<i class=\"fa-solid fa-dog\"></i>"),
     $cat=new Category("Cat","<i class=\"fa-solid fa-cat\"></i>"),
