@@ -32,8 +32,14 @@ require_once __DIR__."/db.php";
                         <h4 class="card-title"><?php echo $product->getName() ?></h4>
                     </div>
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item fs-2">
+                            <?php echo $product->getCategory()->getIcon()  ?>
+                        </li>
                         <li class="list-group-item">
-                            <h5>Materials:</h5>
+                            <?php echo $product->getDimensions()  ?>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Materials: </span> 
                             <?php echo $product->getMaterials() ?>
                         </li>
                     </ul>
@@ -52,8 +58,11 @@ require_once __DIR__."/db.php";
                         <h4 class="card-title"><?php echo $product->getName() ?></h4>
                     </div>
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item fs-2">
+                            <?php echo $product->getCategory()->getIcon()?>
+                        </li>
                         <li class="list-group-item">
-                            <h5>Materials:</h5>
+                            <span>Materials: </span>
                             <?php echo $product->getMaterials() ?>
                         </li>
                     </ul>
@@ -72,6 +81,9 @@ require_once __DIR__."/db.php";
                         <h4 class="card-title"><?php echo $product->getName() ?></h4>
                     </div>
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item fs-2">
+                            <?php echo $product->getCategory()->getIcon()  ?>
+                        </li>
                         <li class="list-group-item">
                             <h5>Ingredients:</h5>
                             <ul>

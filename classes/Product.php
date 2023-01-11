@@ -29,7 +29,7 @@ class Product{
     public function getCategory(){
         return $this->category;
     }
-    public function __construct(string $_image,string $_name,float $_price,array $_category)
+    public function __construct(string $_image,string $_name,float $_price,Category $_category)
     {   
         $this->setImage($_image);
         $this->setName($_name);

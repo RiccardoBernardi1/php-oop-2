@@ -10,10 +10,10 @@ class Category{
         $this->icon=$_icon;
     }
     public function getCategory(){
-        $this->category;
+        return $this->category;
     }
     public function getIcon(){
-        $this->icon;
+        return $this->icon;
     }
     public function __construct(string $_category,string $_icon)
     {
